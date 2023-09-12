@@ -53,6 +53,20 @@ align-self: self-start;
 height:85vh;
 margin-top: 7rem;
 margin-left: 2rem;
+animation-name: zoom;
+animation-duration: 2s;
+animation-timing-function:linear; 
+}
+@keyframes zoom{
+    0%{
+      width: -20%;
+    }
+    50%{
+      width: 50%;
+    }
+   100%{
+      width: 100%;
+    }
 }
 button{
     background: linear-gradient(110deg, #a8c0fc 10%,#f18cd1 80%);
@@ -74,9 +88,24 @@ button{
 }
 .button img{
     height: 6vh;
-    margin-left: 10px;
+    margin-left: 10 px;
 }
-
 .pic img{
     height: 85vh;
+    animation: zoom 1s linear 1;
 }
+@keyframes zoom{
+    0% {
+        transform: scale(0.5, 0.5);
+      }
+    33% {
+        transform: scale(0.5, 0.5);
+      }
+      66% {
+        transform: scale(0.75, 0.75);
+      }
+      100%{
+        transform: scale(1, 1);
+      }
+    }
+
